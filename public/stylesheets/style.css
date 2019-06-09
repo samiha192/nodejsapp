@@ -1,0 +1,6 @@
+.ui-btn {
+    font-size: 1em;
+    line-height: 1.3;
+    font-family: 'Comic Sans MS' /*{global-font-family}*/;
+    background-color: #666666;
+}

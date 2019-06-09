@@ -1,0 +1,132 @@
+<DOCTYPE html>
+    <html xmlns="https://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>Product App</title>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="/javascripts/my.js"></script>
+
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.js"></script>
+        <link rel="stylesheet" href="stylesheets/what.min.css" />
+        <link rel="stylesheet" href="stylesheets/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+
+
+
+    <body>
+        <div data-role="page" id="home">
+            <div data-theme="a" data-role="header">
+                <h3>The Cars App</h3>
+                <h4>Home Page</h4>
+
+            </div>
+            <div data-role="content">
+                <div>
+                    <ul data-role="listview" data-autodividers="true" data-theme="a" id="notes"></ul>
+                </div>
+                <br />
+
+                <a href="#addpage" class="ui-btn" data-transition="flip">Add a new Car</a>
+                <br />
+
+                <br />
+                <a href="#updatepage" class="ui-btn" data-transition="flip">Update Car Details</a>
+                <br />
+                <h5>Delete a car by the Make of the Car</h5>
+                <a href="#deletepage" class="ui-btn" data-transition="flip">Delete Car</a>
+            </div>
+            <div data-role="footer">
+                <h1>Developed by Samiha & Jyoti</h1>
+            </div>
+        </div>
+
+        <div data-role="page" id="details-page">
+            <div data-theme="a" data-role="header">
+                <h3>The Cars App</h3>
+                <h4>Details Page</h4>
+                <a href="#home" class="ui-btn-left">Back</a>
+            </div>
+            <div data-role="content">
+                <p id="detailParmHere" hidden>change1</p>
+                <p id="showdata">change2</p>
+                <p id="showdata1">change2</p>
+                <p id="showdata2">change2</p>
+            </div>
+
+            <div data-role="footer">
+                <h1>Developed by Samiha & Jyoti</h1>
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="addpage" data-theme="c">
+            <div data-role="header">
+                <h3>The Cars App</h3>
+                <h4>Add Car</h4>
+            </div>
+            <div data-role="main" class="ui-content">
+                <div>
+                    <h2>Add a new Note</h2>
+                    Year: <input type="text" id="newPriority" size="25" /> <br />
+                    Make: <input type="text" id="newSubject" size="60" /> <br />
+                    Model : <input type="text" id="newDescription" size="5" /> <br />
+                    <input type="button" value="Add Car" onclick="addNote();" />
+                </div>
+
+                <a href="#home"  class="ui-btn" data-transition="flip" data-rel="back">Go Back</a>
+            </div>
+            <div data-role="footer">
+                <h1>Developed by Samiha & Jyoti</h1>
+            </div>
+        </div>
+
+
+        <div data-role="page" id="updatepage" data-theme="c">
+            <div data-role="header">
+                <h3>The Cars App</h3>
+                <h4>Update Car</h4>
+            </div>
+            <div data-role="main" class="ui-content">
+                <div>
+                    <h2>Update Note</h2>
+                    Year: <input type="text" id="newPriority" size="25" /> <br />
+                    Make: <input type="text" id="newSubject" size="60" /> <br />
+                    Model: <input type="text" id="newDescription" size="5" /> <br />
+                    <input type="button"  value="Update Car" onclick="updateNote();" />
+                </div>
+
+                <a href="#home" class="ui-btn" data-transition="flip" data-rel="back">Go Back</a>
+            </div>
+            <div data-role="footer">
+                <h1>Developed by Samiha & Jyoti</h1>
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="deletepage" data-theme="c">
+            <div data-role="header">
+                <h3>The Cars App</h3>
+                <h4>Delete Car</h4>
+            </div>
+            <div data-role="main" class="ui-content">
+                <div>
+                    <h2>Delete a Car by Car Make</h2>
+                    <input type="text" id="noteToDelete" size="25" />
+                    <input type="button" value="Delete Car" onclick="deleteNote();" />
+                </div>
+                <a href="#home" class="ui-btn" data-transition="flip" data-rel="back">Go Back</a>
+            </div>
+            <div data-role="footer">
+                <h1>Developed by Samiha & Jyoti</h1>
+            </div>
+        </div>
+    </body>
+
+</html>
